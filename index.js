@@ -62,7 +62,7 @@ app.post("/register", (req, res)=> {
     })
     
 }) 
-
-app.listen(9002,() => {
+const port = process.env.PORT || 8000
+app.listen(port,() => {
     console.log("BE started at port 9002")
 })
