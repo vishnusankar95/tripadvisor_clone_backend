@@ -1,6 +1,10 @@
-import express from "express"
-import cors from "cors"
-import mongoose from "mongoose"
+
+const express= require("express")
+const cors= require("cors")
+const mongoose= require("mongoose")
+
+// const connect = require('./configs/db');
+require('dotenv').config()
 
 const app = express()
 app.use(express.json())
@@ -62,7 +66,8 @@ app.post("/register", (req, res)=> {
     })
     
 }) 
+const port = process.env.PORT || 8000
 
-app.listen(9002,() => {
+app.listen(port,() => {
     console.log("BE started at port 9002")
 })
