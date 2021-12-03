@@ -2,6 +2,9 @@ import express from "express"
 import cors from "cors"
 import mongoose from "mongoose"
 
+const connect = require('./configs/db');
+require('dotenv').config()
+
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded())
