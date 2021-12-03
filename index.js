@@ -6,6 +6,9 @@ const mongoose= require("mongoose")
 // const connect = require('./configs/db');
 require('dotenv').config()
 
+const connect = require('./configs/db');
+require('dotenv').config()
+
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded())
@@ -67,7 +70,6 @@ app.post("/register", (req, res)=> {
     
 }) 
 const port = process.env.PORT || 8000
-
 app.listen(port,() => {
     console.log("BE started at port 9002")
 })
